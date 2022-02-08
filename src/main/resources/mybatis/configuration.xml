@@ -7,7 +7,7 @@
     </typeAliases>
 
     <mappers>
-        <mapper resource="mybatis/mappers/blogWrite.xml" />
+        <mapper resource="mybatis/mappers/user.xml" />
     </mappers>
 </configuration>
 

@@ -13,7 +13,7 @@
 	<div id="center-content">
 		
 		<!--메인 해더 자리 -->
-		
+		<c:import url="/WEB-INF/views/includes/main-header.jsp"></c:import>
 		
 		<form id="search-form">
 			<fieldset>
@@ -26,7 +26,7 @@
 				<input id="rdo-title" type="radio" name="kwdOpt" value="optTitle" > 
 				
 				<label for="rdo-userName">블로거 이름</label> 
-				<input id="rdo-userName"" type="radio" name="kwdOpt" value="optName" > 
+				<input id="rdo-userName" type="radio" name="kwdOpt" value="optName" > 
 			</fieldset>
 		</form>
 		
@@ -36,7 +36,7 @@
 		</div>
 		
 		<!-- 메인 푸터  자리-->
-	
+		<c:import url="/WEB-INF/views/includes/main-footer.jsp"></c:import>
 	
 	</div>
 	<!-- //center-content -->
