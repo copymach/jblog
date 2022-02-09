@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="blog">
+
+<!-- 블로그 생성용 -->
+<!-- blog 정보 입력 (id , blogTitle 블로그제목 , logoFile 블로그이미지경로) -->
+<insert id="generateBlog" parameterType="BlogVo">
+<![CDATA[
+insert into	blog values	(
+				#{id}
+				, #{blogTitle}
+				, #{logoFile}
+)
+]]>
+</insert>
+
+
+
+</mapper>

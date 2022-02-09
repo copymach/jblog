@@ -16,6 +16,17 @@ INSERT INTO users VALUES (
 ]]>
 </insert>
 
+<select id="selectUser" parameterType="UserVo" resultType="UserVo">
+<![CDATA[
+select userNo , id , userName , password , joindate
+from users
+where id = #{id}
+and password = #{password}
+]]>
+</select>
+
+
+
 
 
 </mapper>

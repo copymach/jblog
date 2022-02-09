@@ -5,8 +5,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>JBlog main</title>
-<link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/jblog.css">
+<title>JBlog - Welcome to The JavaBlog A.K.A JBlog</title>
+<link href="${pageContext.request.contextPath}/assets/css/jblog.css" rel="stylesheet" type="text/css">
 
 </head>
 <body>
@@ -17,7 +17,7 @@
 		
 		<form id="search-form">
 			<fieldset>
-				<input type="text" name="keyword" >
+				<input type="text" name="keyword" value="" autofocus>
 				<button id="btnSearch" type="submit" >검색</button>
 			</fieldset>
 			

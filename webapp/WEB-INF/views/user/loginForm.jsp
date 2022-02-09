@@ -26,7 +26,7 @@
 					</colgroup>
 		      		<tr>
 		      			<td><label for="textId">아이디</label></td>
-		      			<td><input id="textId" type="text" name="id"></td>
+		      			<td><input id="textId" type="text" name="id" autofocus></td>
 		      		</tr>
 		      		<tr>
 		      			<td><label for="textPassword">패스워드</label> </td>
