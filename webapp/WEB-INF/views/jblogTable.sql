@@ -7,7 +7,7 @@ sqlplus system/manager
 --jblog 계정생성
 CREATE USER jblog IDENTIFIED BY jblog ;
 
---jblog 계정 비번 변경
+--jblog 계정 언락
 ALTER USER jblog IDENTIFIED BY jblog ACCOUNT UNLOCK;
 
 --jblog 권한주기
