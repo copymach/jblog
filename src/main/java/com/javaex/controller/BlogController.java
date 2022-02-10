@@ -2,6 +2,7 @@ package com.javaex.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.javaex.service.BlogService;
 
@@ -11,10 +12,10 @@ public class BlogController {
 	@Autowired
 	private BlogService blogService;
 	
-	public String jblog() {
-		System.out.println("BlogController.jblog 블로그시작");
+	public String jblog(@RequestParam("id")String blogname) {
+		System.out.println("BlogController.jblog 블로그시작"+blogname);
 		
-		return "";
+		return "/jblog/"+blogname;
 	}
 	
 	
