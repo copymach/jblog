@@ -18,9 +18,9 @@ public class BlogDao {
 		sqlSession.insert("blog.generateBlog", blogMap);
 	}
 
-	public String getJblog (String blogName) {
-		System.out.println("BlogDao.getJblog ");
-		return sqlSession.selectOne("blog.getJblog", blogName);
+	public String blogMain (String id) {
+		System.out.println("BlogDao.blogMain ");
+		return sqlSession.selectOne("blog.blogMain", id);
 	}
 
 } // The end of BlogDao

@@ -11,9 +11,9 @@ public class BlogService {
 	@Autowired
 	public BlogDao blogDao;
 	
-	public String getJblog(String blogName) {
-		System.out.println("getJblog");
-		return blogDao.getJblog(blogName);
+	public String blogMain(String id) {
+		System.out.println("BlogService.blogMain ");
+		return blogDao.blogMain(id);
 		
 	}
 	

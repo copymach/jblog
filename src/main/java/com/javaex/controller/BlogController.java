@@ -1,24 +1,28 @@
 package com.javaex.controller;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import com.javaex.service.BlogService;
 
 @Controller
+@RequestMapping(value="/{id}")
 public class BlogController {
-
+	
 	@Autowired
 	private BlogService blogService;
 	
-	public String getJblog(@RequestParam("id")String blogName) {
-		System.out.println("BlogController.jblog 블로그시작"+blogName);
+	@RequestMapping("")
+	public String blogMain(@PathVariable("id")String id, HttpSession session) {
+		System.out.println("BlogController.blogMain 블로그시작"+id);
 		
-		blogService.getJblog(blogName);
+		blogService.blogMain(id);
 		
-		return "/jblog/"+blogName;
+		return "/blog/blog-main/"+id;
 	}
 	
 	
