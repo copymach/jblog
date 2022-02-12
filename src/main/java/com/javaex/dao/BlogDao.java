@@ -6,6 +6,8 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import com.javaex.vo.BlogVo;
+
 @Repository
 public class BlogDao {
 
@@ -18,9 +20,16 @@ public class BlogDao {
 		sqlSession.insert("blog.generateBlog", blogMap);
 	}
 
-	public String blogMain (String id) {
-		System.out.println("BlogDao.blogMain ");
-		return sqlSession.selectOne("blog.blogMain", id);
+	public String blogInfo (String id) {
+		System.out.println("BlogDao.blogInfo ");
+		return sqlSession.selectOne("blog.blogInfo", id);
 	}
-
+	
+	public void blogDefalut(BlogVo blogVo) {
+		System.out.println("BlogDao.blogDefalut 블로그기본값");
+		sqlSession.update("blog.blogDefalut", blogVo);
+	}
+	
+	
 } // The end of BlogDao
+
