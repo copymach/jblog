@@ -16,6 +16,20 @@ insert into	blog values	(
 ]]>
 </insert>
 
+<select id="blogInfo" resultType="BlogVo" parameterType="BlogVo">
+select	b.id id
+		, blogtitle
+		, logofile
+		, u.userName
+from blog b, users u
+where b.id = u.id
+and b.id = #{id}
+</select>
+
+<update id="blogDefalut" parameterType="BlogVo">
+
+
+</update>
 
 
 </mapper>
