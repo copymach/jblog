@@ -16,6 +16,8 @@ insert into	blog values	(
 ]]>
 </insert>
 
+
+<!-- 블로그정보용 -->
 <select id="blogInfo" resultType="BlogVo" parameterType="BlogVo">
 select	b.id id
 		, blogtitle
@@ -26,9 +28,13 @@ where b.id = u.id
 and b.id = #{id}
 </select>
 
+
+<!-- 블로그 시작시 기본값 -->
 <update id="blogDefalut" parameterType="BlogVo">
-
-
+update	blog 
+set		blogTitle = #{blogTitle}
+		,logofile = #{logoFile}
+where id = #{id}
 </update>
 
 
