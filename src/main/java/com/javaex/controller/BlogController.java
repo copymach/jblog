@@ -42,6 +42,6 @@ public class BlogController {
 		session.setAttribute("blogInfo", blogService.blogDefalut(blogVo, file));
 		
 		return "redirect:/{id}/admin/basic";
-	}
+	} // blogDefalut
 	
 } // The end of BlogController
