@@ -28,7 +28,7 @@ public class CategoryController {
 		System.out.println("CategoryController.catelist");
 		
 		return categoryService.getcateList(id);
-	}
+	} // catelist
 	
 	
 } // The end of CategoryController 
