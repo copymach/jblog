@@ -21,7 +21,7 @@ public class CategoryController {
 		System.out.println("CategoryController.main ");
 		
 		return "/blog/admin/blog-admin-cate";
-	}
+	} // main
 	
 	@RequestMapping(value="")
 	public List<CategoryVo> catelist(@RequestParam("id")String id ) {
